@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type='text/javascript' src='/static/chat_socket.js'></script>
+  <script type='text/javascript' src='/static/chat_view.js'></script>
+  <link rel='stylesheet' href='/static/chat.css'></link>
+  <title>test</title>
+</head>
+<body>
+  <label for='name'class='before'>Name</label><input id='name' />
+
+  <form onsubmit='chat.view.sendMessage(); return false;'>
+    <textarea id='msg' rows='1'></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <button onclick="chat.view.close()">Close</button>
+  <div id="rtable" class="rtable">
+    <table id="tbl_out">
+      <tbody id='output'>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
